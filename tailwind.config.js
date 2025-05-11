@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaulttheme = require('tailwindcss/defaultTheme');
 export default {
   content: [
     './resources/views/**/*.blade.php',
@@ -6,7 +7,12 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+       
+      fontFamily:{
+        sans:["inter var",  ...defaulttheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [],
 }
